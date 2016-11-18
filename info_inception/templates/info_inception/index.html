@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'material/includes/material_css.html' %}
+    {% include 'material/includes/material_js.html' %}
+    {% load material_form %}
+    <meta charset="UTF-8">
+    <title>INFORMATIK PL</title>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+    {% form form=form %}{% endform %}
+    <button type="submit" name="_submit" class="btn">Submit</button>
+</form>
+</body>
+</html>
